@@ -1,0 +1,57 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Weight Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 500px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        .input-group { margin-bottom: 10px; }
+        .input-group label { display: block; margin-bottom: 5px; }
+        .input-group input { width: 100%; padding: 8px; box-sizing: border-box; }
+        .input-group select { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fish Weight Prediction</h2>
+        <form action="/predict" method="post">
+            <div class="input-group">
+                <label for="species">Species</label>
+                <select name="species" id="species">
+                    <option value="Bream">Bream</option>
+                    <option value="Roach">Roach</option>
+                    <option value="Whitefish">Whitefish</option>
+                    <option value="Parkki">Parkki</option>
+                    <option value="Smelt">Smelt</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="length1">Length1</label>
+                <input type="number" name="length1" id="length1" required>
+            </div>
+            <div class="input-group">
+                <label for="length2">Length2</label>
+                <input type="number" name="length2" id="length2" required>
+            </div>
+            <div class="input-group">
+                <label for="length3">Length3</label>
+                <input type="number" name="length3" id="length3" required>
+            </div>
+            <div class="input-group">
+                <label for="height">Height</label>
+                <input type="number" name="height" id="height" required>
+            </div>
+            <div class="input-group">
+                <label for="width">Width</label>
+                <input type="number" name="width" id="width" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
