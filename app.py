@@ -6,7 +6,14 @@ app = Flask(__name__)
 
 # Load the model and scaler
 model = joblib.load('models/fish_weight_model.pkl')
+print(model)
 scaler = joblib.load('scaler.pkl')
+
+
+import gzip
+
+with gzip.open('models/fish_weight_model.pkl.gz', 'rb') as f:
+    model = joblib.load(f)
 
 @app.route('/')
 def home():
